@@ -1,34 +1,41 @@
 import { createGlobalStyle } from "styled-components";
 
-export default createGlobalStyle`
-  *, 
+const styled = { createGlobalStyle };
+
+export default styled.createGlobalStyle`
+  *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
 
   :root {
-        --color-background-dark: #1a181f;
-        --color-background-light: #ffffff;
-        --color-text-dark: #1a181f;
-        --color-text-white: #cecece;
-        
-        --color-button: #1a1b1f;
-        --color-button-hover: #f3a661;
-        --color-buttonText: #001e1d;
+    --color-background-light: #ffffff;
+    --color-text-light: #cecece;
+    /* --color-background-dark: #1a181f;
+    --color-text-dark: #1a181f; */
 
-        --color-stroke: #001e1d;
-        --color-tertiary: #e16162;
-        --color-tertiary-hover: #E77862;
-    }
+    /* --color-button: #1a1b1f;
+    --color-button-hover: #f3a661;
+    --color-buttonText: #001e1d; */
+
+    --color-stroke: #1a181f;
+    /* --color-tertiary: #e16162;
+    --color-tertiary-hover: #e77862; */
+  }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
-        'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-        'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: var(--color-background-light);
+    margin: 0;
+  }
+
+  h1,
+  h2 {
     margin: 0;
   }
 
@@ -38,9 +45,9 @@ export default createGlobalStyle`
   }
 
   a {
-  display: block;
-  transition: opacity 200ms ease;
-  color: var(--color-text-dark);
-  text-decoration: underline;
+    display: block;
+    transition: opacity 200ms ease;
+    color: var(--color-text-dark);
+    text-decoration: none;
   }
 `;
