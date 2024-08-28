@@ -4,9 +4,9 @@ import styled from "styled-components";
 export default function Header() {
   return (
     <StyledFooter>
-      <h2>
+      <StyledHeading>
         <a href="/">Paul.</a>
-      </h2>
+      </StyledHeading>
       <StyledLinkSection>
         <a href="https://github.com/PReichetanz">GitHub</a>
         <a href="https://www.linkedin.com/in/preichetanz/">LinkedIn</a>
@@ -23,6 +23,10 @@ const StyledFooter = styled.footer`
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
+`;
+
+const StyledHeading = styled.h2`
+  margin: 0;
 `;
 
 const StyledLinkSection = styled.section`

@@ -8,7 +8,9 @@ export default function Contact() {
         Kontaktiere mich gern, wenn Du nach einem Entwickler suchst, eine Frage
         hast oder Dich ganz einfach vernetzen möchtest!
       </StyledParagraph>
-      <a href="mailto:hallo@paulreichetanz.de">hallo@paul.reichetanz.de</a>
+      <StyledLink href="mailto:hallo@paulreichetanz.de">
+        hallo@paul.reichetanz.de
+      </StyledLink>
     </section>
   );
 }
@@ -16,4 +18,8 @@ export default function Contact() {
 const StyledParagraph = styled.p`
   padding-inline: 1rem;
   max-width: 600px;
+`;
+
+const StyledLink = styled.a`
+  padding: 0 1rem 3rem 1rem;
 `;
