@@ -18,7 +18,8 @@ export default function Header() {
 const StyledFooter = styled.footer`
   border-top: 1px solid var(--color-stroke);
   margin: 0 2vw;
-  padding: 2vw;
+  padding: 1rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,6 +34,7 @@ const StyledLinkSection = styled.section`
   display: flex;
   gap: 1rem;
   align-items: center;
+  margin-right: 1rem;
   a {
     text-transform: lowercase;
     font-weight: 500;

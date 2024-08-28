@@ -37,6 +37,11 @@ export default function ProjectOverview() {
   return (
     <>
       <StyledHeading>Woran ich gearbeitet habe</StyledHeading>
+      <p>
+        Ich mag es, produktiv zu sein und habe immer ein Projekt (oder mehrere?)
+        in Arbeit. Schau Dich gern bei denjenigen Applikationen um, in die ich
+        Zeit investiert habe.
+      </p>
       <StyledList role="list">
         {projects.map(
           ({ id, name, description, imageURL, alt, deploymentURL }) => (
@@ -63,7 +68,7 @@ const StyledHeading = styled.h2`
 const StyledList = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
-  gap: 2rem;
+  gap: 4rem 10vw;
   position: relative;
   justify-content: center;
   margin: 1rem 0 2rem 0;

@@ -15,9 +15,9 @@ export default function Home() {
         <Introduction />
         <hr />
         <SkillsList />
-        <hr/>
+        <hr />
         <ProjectOverview />
-        <hr/>
+        <hr />
         <Contact />
       </MainFlexbox>
       <Footer />
@@ -29,5 +29,5 @@ const MainFlexbox = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 0 3vw;
+  padding: 0 5vw;
 `;

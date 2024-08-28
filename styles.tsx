@@ -49,7 +49,8 @@ export default styled.createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     background: var(--color-background-light);
     color: var(--color-text-light);
-    margin: 0;
+    margin-inline: auto;
+    max-width: 1320px;
   }
 
   h1 {
@@ -91,7 +92,7 @@ export default styled.createGlobalStyle`
   }
 
   hr {
-    width: 80vw;
+    width: 80%;
     background-color: var(--color-stroke);
     opacity: 0.3;
   }
@@ -99,6 +100,8 @@ export default styled.createGlobalStyle`
   p {
     color: var(--color-text-light);
     opacity: 0.6;
-    font-weight: 600;
+    font-weight: 500;
+    line-height: 2;
+    padding: 1rem 0 1rem 2rem;
   }
 `;

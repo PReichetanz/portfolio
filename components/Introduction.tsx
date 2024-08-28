@@ -74,10 +74,8 @@ const StyledSpan = styled.span`
 `;
 
 const TextWrapper = styled.div`
-  padding-inline: 1rem;
   @media screen and (min-width: 720px) {
     display: flex;
     gap: 2rem;
-    padding: 0 2rem;
   }
 `;

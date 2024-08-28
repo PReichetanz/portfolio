@@ -16,7 +16,7 @@ export default function Contact() {
 }
 
 const StyledParagraph = styled.p`
-  padding-inline: 1rem;
+  padding-block: 1rem;
   max-width: 600px;
 `;
 

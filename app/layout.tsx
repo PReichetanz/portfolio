@@ -28,5 +28,4 @@ export default function RootLayout({
 const PageGrid = styled.div`
   display: grid;
   grid-template-rows: max-content 1fr max-content;
-  height: 100vh;
 `;

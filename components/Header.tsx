@@ -14,6 +14,7 @@ export default function Header() {
 
 const EmailLink = styled.a`
   display: block;
+  margin-right: 2rem;
 `;
 
 const MainPageLink = styled.a`
@@ -21,6 +22,7 @@ const MainPageLink = styled.a`
 `;
 
 const StyledHeader = styled.header`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;

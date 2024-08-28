@@ -23,10 +23,10 @@ export default function Project({
         src={imageURL}
         alt={alt || ""}
         fill
-        sizes="(min-width: 80px) 50vw, 100vw"
+        sizes="(min-width: 80px) 50%, 100%"
       />
       <h3>{name}</h3>
-      <p>{description}</p>
+      <StyledDescription>{description}</StyledDescription>
       <a href={deploymentURL} target="blank">
         Projekt ansehen &gt;
       </a>
@@ -39,6 +39,10 @@ const ProjectWrapper = styled.article`
   img {
     box-shadow: var(--shadow-elevation-medium);
   }
+`;
+
+const StyledDescription = styled.p`
+  padding: 0;
 `;
 
 const StyledImage = styled(Image)`
