@@ -63,10 +63,31 @@ export default styled.createGlobalStyle`
   }
 
   a {
-    display: block;
     transition: opacity 200ms ease;
     color: var(--color-text-dark);
     text-decoration: none;
+
+    position: relative;
+    transition: color 0.3s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      height: 3px;
+      background-color: var(--color-tertiary);
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover {
+      color: var(--color-tertiary);
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
   }
   p {
     color: var(--color-text-light);

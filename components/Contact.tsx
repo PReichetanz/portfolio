@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default function Contact() {
   return (
-    <section>
+    <StyledSection>
       <h2>Lass&apos; uns was zusammen bauen!</h2>
       <StyledParagraph>
         Kontaktiere mich gern, wenn Du nach einem Entwickler suchst, eine Frage
@@ -11,7 +11,7 @@ export default function Contact() {
       <StyledLink href="mailto:hallo@paulreichetanz.de">
         hallo@paul.reichetanz.de
       </StyledLink>
-    </section>
+    </StyledSection>
   );
 }
 
@@ -21,5 +21,9 @@ const StyledParagraph = styled.p`
 `;
 
 const StyledLink = styled.a`
-  padding: 0 1rem 3rem 1rem;
+  padding-inline: 1rem 0;
+`;
+
+const StyledSection = styled.section`
+  padding-bottom: 3rem;
 `;
