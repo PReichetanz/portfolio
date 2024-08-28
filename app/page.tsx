@@ -13,8 +13,11 @@ export default function Home() {
       <Header />
       <MainFlexbox>
         <Introduction />
+        <hr />
         <SkillsList />
+        <hr/>
         <ProjectOverview />
+        <hr/>
         <Contact />
       </MainFlexbox>
       <Footer />

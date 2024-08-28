@@ -45,4 +45,5 @@ const StyledImage = styled(Image)`
   position: relative !important;
   display: block;
   object-fit: contain;
+  border-radius: 8px;
 `;

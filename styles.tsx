@@ -89,6 +89,13 @@ export default styled.createGlobalStyle`
       transform: scaleX(1);
     }
   }
+
+  hr {
+    width: 80vw;
+    background-color: var(--color-stroke);
+    opacity: 0.3;
+  }
+
   p {
     color: var(--color-text-light);
     opacity: 0.6;

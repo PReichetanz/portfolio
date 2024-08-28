@@ -21,6 +21,7 @@ export default function SkillsList() {
 
 const StyledList = styled.ul`
   margin-top: 1rem;
+  padding-bottom: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 1rem;
