@@ -6,6 +6,7 @@ import SkillsList from "@/components/SkillsList";
 import Introduction from "@/components/Introduction";
 import styled from "styled-components";
 import ProjectOverview from "@/components/ProjectOverview";
+import { projects } from "../lib/db";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
         <hr />
         <SkillsList />
         <hr />
-        <ProjectOverview />
+        <ProjectOverview title="Woran ich gearbeitet habe" projects={projects} />
         <hr />
         <Contact />
       </MainFlexbox>

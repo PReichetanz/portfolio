@@ -1,61 +1,33 @@
 import styled from "styled-components";
 import Project from "./Project";
+import type { ProjectType } from "../lib/db";
 
-export default function ProjectOverview() {
-  const projects = [
-    {
-      id: 1,
-      name: "Flachwitzgenerator",
-      description:
-        "Eine App, die einen zufällig ausgewählten Flachwitz anzeigt.",
-      imageURL: "/joke.png",
-      deploymentURL: "https://wordplay-nu.vercel.app",
-      githubURL: "https://github.com/PReichetanz/joke-of-the-day",
-      alt: "Startbildschirm der Flachwitz-App",
-    },
-    {
-      id: 2,
-      name: "Beurteilungsbuddy",
-      description:
-        "Eine App, die Lehrer:innen die Bewertung ihrer Schüler:innen erleichtert..",
-      imageURL: "/beurteilungsbuddy-home.png",
-      deploymentURL: "https://beurteilungsbuddy.vercel.app",
-      githubURL: "https://github.com/PReichetanz/beurteilungsbuddy",
-      alt: "Startbildschirm der Beurteilungsbuddy-App",
-    },
-    {
-      id: 3,
-      name: "Star Wars Battle Counter",
-      description: "Diese App hilft dabei, den Spielstand zu tracken.",
-      imageURL: "/swbc-home.png",
-      deploymentURL: "https://star-wars-battles-counter.vercel.app",
-      githubURL: "https://github.com/PReichetanz/star-wars-battles-counter",
-      alt: "Startbildschirm der Flachwitz-App",
-    },
-  ];
+type ProjectOverviewProps = {
+  projects: ProjectType[],
+  title: string
+};
 
+export default function ProjectOverview({ projects, title }: ProjectOverviewProps): JSX.Element {
   return (
     <>
-      <StyledHeading>Woran ich gearbeitet habe</StyledHeading>
+      <StyledHeading>{title}</StyledHeading>
       <p>
         Ich mag es, produktiv zu sein und habe immer ein Projekt (oder mehrere?)
         in Arbeit. Schau Dich gern bei denjenigen Applikationen um, in die ich
         Zeit investiert habe.
       </p>
       <StyledList role="list">
-        {projects.map(
-          ({ id, name, description, imageURL, alt, deploymentURL }) => (
-            <li key={id}>
-              <Project
-                name={name}
-                description={description}
-                imageURL={imageURL}
-                deploymentURL={deploymentURL}
-                alt={alt}
-              />
-            </li>
-          )
-        )}
+        {projects.map(({ id, name, descriptions, images, slug }) => (
+          <li key={id}>
+            <Project
+              name={name}
+              description={descriptions.short}
+              imageURL={images.main.url}
+              alt={images.main.alt}
+              slug={slug}
+            />
+          </li>
+        ))}
       </StyledList>
     </>
   );

@@ -1,21 +1,22 @@
 import Image from "next/image";
 import { ReactElement } from "react";
 import styled from "styled-components";
+import Link from "next/link"
 
 type ProjectType = {
   name: string;
   description: string;
   imageURL: string;
-  deploymentURL: string;
   alt?: string;
+  slug: string
 };
 
 export default function Project({
   name,
   description,
   imageURL,
-  deploymentURL,
   alt,
+  slug
 }: ProjectType): ReactElement {
   return (
     <ProjectWrapper>
@@ -27,9 +28,9 @@ export default function Project({
       />
       <h3>{name}</h3>
       <StyledDescription>{description}</StyledDescription>
-      <a href={deploymentURL} target="blank">
+      <Link href={slug}>
         Projekt ansehen &gt;
-      </a>
+      </Link>
     </ProjectWrapper>
   );
 }
