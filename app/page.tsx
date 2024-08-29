@@ -17,7 +17,7 @@ export default function Home() {
         <hr />
         <SkillsList />
         <hr />
-        <ProjectOverview title="Woran ich gearbeitet habe" projects={projects} />
+        <ProjectOverview title="Woran ich gearbeitet habe" projects={projects} isHomepage/>
         <hr />
         <Contact />
       </MainFlexbox>

@@ -4,18 +4,21 @@ import type { ProjectType } from "../lib/db";
 
 type ProjectOverviewProps = {
   projects: ProjectType[],
-  title: string
+  title: string,
+  isHomepage?: boolean
 };
 
-export default function ProjectOverview({ projects, title }: ProjectOverviewProps): JSX.Element {
+export default function ProjectOverview({ projects, title, isHomepage }: ProjectOverviewProps): JSX.Element {
   return (
     <>
       <StyledHeading>{title}</StyledHeading>
+      {isHomepage &&
       <p>
-        Ich mag es, produktiv zu sein und habe immer ein Projekt (oder mehrere?)
+        Ich mag es, produktiv zu sein und habe immer ein Projekt
         in Arbeit. Schau Dich gern bei denjenigen Applikationen um, in die ich
         Zeit investiert habe.
       </p>
+      }
       <StyledList role="list">
         {projects.map(({ id, name, descriptions, images, slug }) => (
           <li key={id}>
