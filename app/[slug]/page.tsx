@@ -8,6 +8,7 @@ import Link from "next/link";
 import type { ProjectType } from "../../lib/db";
 import ProjectOverview from "@/components/ProjectOverview";
 import Image from "next/image";
+import { ArrowLeft } from "lucide-react";
 
 export default function ProjectDetailPage({
   params,
@@ -32,7 +33,7 @@ export default function ProjectDetailPage({
     <>
       <Header />
       <MainFlexbox>
-        <Link href="/">Zurück</Link>
+        <StyledBackLink href="/"><ArrowLeft size={20} /> Zurück</StyledBackLink>
         <h2>{name}</h2>
         <p>{descriptions.long}</p>
         <StyledDescriptionList>
@@ -76,11 +77,10 @@ export default function ProjectDetailPage({
           </div>
         </StyledTechStackExplanationWrapper>
         <StyledProblemsWrapper>
-
-        <h3>Probleme und Gedanken</h3>
-        {texts.problems.map((problemText, index) => (
-          <p key={index}>{problemText}</p>
-        ))}
+          <h3>Probleme und Gedanken</h3>
+          {texts.problems.map((problemText, index) => (
+            <p key={index}>{problemText}</p>
+          ))}
         </StyledProblemsWrapper>
         <h3>Lessons Learned</h3>
         {texts.lessonsLearned.map((lessonLearnedText, index) => (
@@ -102,8 +102,16 @@ const MainFlexbox = styled.main`
   padding: 0 5vw;
 `;
 
+const StyledBackLink = styled(Link)`
+display: flex;
+align-items: center;
+margin-top: 1rem;
+width: max-content;
+`;
+
 const StyledDescriptionDetails = styled.dd`
   margin: 0;
+  padding-bottom: 1rem;
   a {
     font-weight: 600;
   }
@@ -112,9 +120,9 @@ const StyledDescriptionDetails = styled.dd`
 const StyledDescriptionList = styled.dl`
   display: flex;
   padding-left: 2rem;
-  gap: 5rem;
+  gap: 10%;
   flex-wrap: wrap;
-  @media (max-width: 400px) {
+  @media (max-width: 576px) {
     flex-direction: column;
     gap: 1rem;
   }
@@ -126,7 +134,7 @@ const StyledDescriptionTerm = styled.dt`
 `;
 
 const StyledProblemsWrapper = styled.section`
-text-align: center;
+  text-align: center;
 `;
 
 const StyledTechStackExplanationWrapper = styled.section`
@@ -134,7 +142,7 @@ const StyledTechStackExplanationWrapper = styled.section`
   display: flex;
   align-items: center;
   gap: 10%;
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     flex-direction: column-reverse;
     margin-left: 0;
   }
